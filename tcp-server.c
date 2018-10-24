@@ -13,7 +13,7 @@ socklen_t clilen) {
 	int n;
 	char mesg[1000];
     sendto(connfd,WELCOME_MSG,strlen(WELCOME_MSG),0,
-        (struct sockaddr *)&cliaddr,&clilen);
+        (struct sockaddr *)&cliaddr,sizeof(cliaddr));
 	n = recvfrom(connfd,mesg,1050,0,(struct sockaddr *)&cliaddr,&clilen);
 	sendto(connfd,mesg,n,0,(struct sockaddr *)&cliaddr,sizeof(cliaddr));
 	printf("-------------------------------------------------------\n");
