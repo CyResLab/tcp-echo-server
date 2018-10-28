@@ -3,7 +3,7 @@
 
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <strings.h>
+#include <string.h>
 #include <stdio.h>
 
 #define WELCOME_MSG "Welcome to TCP echo!\n"
